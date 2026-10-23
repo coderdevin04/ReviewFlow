@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#635bff">
+<title>ReviewFlow — Interactive Demos</title>
+<style>
+:root{--purple:#635bff;--purple-dark:#5147e5;--ink:#191b23;--muted:#686d7a;--line:#e7e9ef;--bg:#f6f7fb;--soft:#f0efff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f3f4f8;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.demo-bar{background:#191b23;color:#fff;padding:10px 16px;text-align:center;font-size:12px;letter-spacing:.02em}
+.demo-bar strong{color:#c8c4ff}
+.wrap{min-height:calc(100vh - 37px);display:flex;align-items:center;justify-content:center;padding:24px}
+.phone{width:100%;max-width:410px;min-height:780px;background:#fff;border:1px solid #e4e6ed;border-radius:30px;overflow:hidden;box-shadow:0 24px 70px #1c23401a;position:relative;display:flex;flex-direction:column}
+.topbar{height:58px;display:flex;align-items:center;justify-content:center;padding:0 18px;border-bottom:1px solid #f0f1f5;background:#fff;flex-shrink:0}
+.topbar .business-title{font-weight:650;font-size:15px}
+.page{padding:18px 18px 22px;display:flex;flex-direction:column;flex:1}
+.hero{border:1px solid var(--line);border-radius:18px;padding:18px 14px 16px;text-align:center;box-shadow:0 4px 14px #151a2a08}
+.logo{width:54px;height:54px;border:1px solid #dedbff;background:linear-gradient(145deg,#f8f7ff,#eeecff);border-radius:16px;display:grid;place-items:center;margin:0 auto 8px;font-size:27px;box-shadow:0 2px 4px #635bff15;color:var(--purple)}
+.hero h2{font-size:19px;margin:0 0 6px;letter-spacing:-.03em}
+.hero p{font-size:12.5px;color:var(--muted);margin:0 0 11px;line-height:1.5}
+.pill{display:inline-flex;align-items:center;gap:6px;background:#f6f5ff;border:1px solid #e5e2ff;color:#4e47c7;border-radius:99px;padding:6px 10px;font-size:12px}
+h1{font-size:25px;line-height:1.2;letter-spacing:-.04em;margin:22px 0 7px;text-align:center}
+.sub{text-align:center;color:var(--muted);font-size:13px;margin:0 0 16px}
+.demos{display:grid;gap:10px}
+.biz{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:#fff;border-radius:15px;padding:14px 12px;min-height:84px;transition:.15s}
+.biz:active{border-color:#817aff;background:#f3f2ff}
+@media(hover:hover){.biz:hover{border-color:#c9c5ff;background:#faf9ff;transform:translateY(-1px)}}
+.biz-logo{width:48px;height:48px;flex-shrink:0;display:grid;place-items:center;background:#f0efff;border:1px solid #e0ddff;border-radius:13px;font-size:24px}
+.biz-copy{flex:1;min-width:0}
+.biz-copy strong{display:block;font-size:15px;font-weight:650;letter-spacing:-.01em}
+.biz-copy small{display:block;color:var(--muted);font-size:12px;margin-top:3px;line-height:1.4}
+.biz-tag{display:inline-block;margin-top:6px;background:#f0f1f5;border-radius:8px;padding:2px 7px;font-size:11px;color:#4a4f5c}
+.go{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--purple);color:#fff;display:grid;place-items:center;font-size:16px;box-shadow:0 3px 7px #635bff22}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.step{border:1px solid var(--line);border-radius:13px;padding:10px 6px;text-align:center;font-size:11.5px;color:#3e424d;line-height:1.35}
+.step span{display:block;font-size:19px;margin-bottom:4px}
+.bottom{margin-top:auto;padding-top:18px}
+.tiny{text-align:center;font-size:11px;color:#9297a3;margin:0}
+.footer{border-top:1px solid #f0f1f5;text-align:center;padding:12px;color:#9a9eaa;font-size:10px}
+@media(max-width:480px){
+  body{background:#fff}
+  .demo-bar{font-size:11px;padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top))}
+  .wrap{padding:0;background:#fff;display:block;min-height:0}
+  .phone{max-width:none;min-height:calc(100dvh - 60px);border-radius:0;border:0;box-shadow:none;overflow:visible}
+  .page{padding:14px 16px 16px}
+  h1{font-size:23px;margin-top:18px}
+  .biz{min-height:92px}
+  .footer{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+}
+@media(max-width:360px){h1{font-size:21px}.step{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo-bar"><strong>REVIEWFLOW</strong> &nbsp;·&nbsp; Interactive client demo <span style="opacity:.65">— sample businesses</span></div>
+<div class="wrap">
+  <main class="phone" aria-label="ReviewFlow demo home">
+    <header class="topbar"><div class="business-title">ReviewFlow</div></header>
+
+    <section class="page">
+      <div class="hero">
+        <div class="logo">✦</div>
+        <h2>Turn happy customers into Google reviews</h2>
+        <p>A few taps from the customer. A natural, editable review draft written by AI.</p>
+        <div class="pill">✦ &nbsp; Personalized customer experience</div>
+      </div>
+
+      <h1>Choose a demo</h1>
+      <p class="sub">Tap a business to try the customer flow</p>
+
+      <div class="demos">
+        <a class="biz" href="cafe.html">
+          <span class="biz-logo">🌲</span>
+          <span class="biz-copy"><strong>Sequoia Café</strong><small>Raja Park, Jaipur</small><span class="biz-tag">Cafe</span></span>
+          <span class="go">→</span>
+        </a>
+        <a class="biz" href="salon.html">
+          <span class="biz-logo">✨</span>
+          <span class="biz-copy"><strong>Dazzle Salon</strong><small>Bani Park, Jaipur</small><span class="biz-tag">Salon</span></span>
+          <span class="go">→</span>
+        </a>
+      </div>
+
+      <div class="steps" aria-label="How it works">
+        <div class="step"><span>🙂</span>Pick a rating</div>
+        <div class="step"><span>🏷️</span>Tap a few tags</div>
+        <div class="step"><span>✧</span>Get a review draft</div>
+      </div>
+
+      <div class="bottom"><p class="tiny">No sign-up. Just a few taps.</p></div>
+    </section>
+    <footer class="footer">Interactive demo · AI drafts use the feedback you select</footer>
+  </main>
+</div>
+</body>
+</html>
